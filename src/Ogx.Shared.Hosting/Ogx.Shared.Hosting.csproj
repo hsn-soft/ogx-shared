@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.version.props"/>
+    <Import Project="..\..\common.props"/>
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageId>Ogx.Shared.Hosting</PackageId>
+        <RootNamespace>Ogx.Shared.Hosting</RootNamespace>
+        <Title>HsnSoft OGX Shared Hosting</Title>
+        <Description>HsnSoft OGX Shared Hosting</Description>
+        <PackageTags>HsnSoft OGX Shared Hosting</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="9.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="9.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="9.0.0"/>
+        <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="9.0.0"/>
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0"/>
+        <PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1"/>
+        <PackageReference Include="UAParser" Version="3.1.47"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HsnSoft.Base.Swashbuckle" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.AspNetCore.Authentication.JwtBearer" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.AspNetCore.Serilog" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.Data" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.Json" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.EventBus.RabbitMQ" Version="$(HsnSoftFrameworkVersion)"/>
+        <PackageReference Include="HsnSoft.Base.Caching.StackExchangeRedis" Version="$(HsnSoftFrameworkVersion)"/>
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.Swashbuckle\HsnSoft.Base.Swashbuckle.csproj"/>-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.AspNetCore.Authentication.JwtBearer\HsnSoft.Base.AspNetCore.Authentication.JwtBearer.csproj"/>-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.AspNetCore.Serilog\HsnSoft.Base.AspNetCore.Serilog.csproj"/>-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.Data\HsnSoft.Base.Data.csproj"/>-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.Json\HsnSoft.Base.Json.csproj"/>-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.EventBus.RabbitMQ\HsnSoft.Base.EventBus.RabbitMQ.csproj" />-->
+        <!--<ProjectReference Include="..\..\..\..\..\hsn-soft\base-framework\src\HsnSoft.Base.Caching.StackExchangeRedis\HsnSoft.Base.Caching.StackExchangeRedis.csproj" />-->
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Ogx.Shared.Helper\Ogx.Shared.Helper.csproj" />
+    </ItemGroup>
+
+</Project>

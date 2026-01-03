@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.version.props"/>
+    <Import Project="..\..\common.props"/>
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageId>Ogx.Shared.Helper</PackageId>
+        <RootNamespace>Ogx.Shared.Helper</RootNamespace>
+        <Title>HsnSoft OGX Shared Helper</Title>
+        <Description>HsnSoft OGX Shared Helper</Description>
+        <PackageTags>HsnSoft OGX Shared Helper</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MailKit" Version="4.14.1" />
+        <PackageReference Include="MimeKit" Version="4.14.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Ogx.Shared.Localization\Ogx.Shared.Localization.csproj" />
+    </ItemGroup>
+
+</Project>

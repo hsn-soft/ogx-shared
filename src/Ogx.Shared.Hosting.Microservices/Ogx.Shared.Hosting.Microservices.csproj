@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\common.version.props"/>
+    <Import Project="..\..\common.props"/>
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <PackageId>Ogx.Shared.Hosting.Microservices</PackageId>
+        <RootNamespace>Ogx.Shared.Hosting.Microservices</RootNamespace>
+        <Title>HsnSoft OGX Shared Hosting Microservices</Title>
+        <Description>HsnSoft OGX Shared Hosting Microservices</Description>
+        <PackageTags>HsnSoft OGX Shared Hosting Microservices</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Ogx.Shared.Contracts\Ogx.Shared.Contracts.csproj" />
+        <ProjectReference Include="..\Ogx.Shared.Hosting\Ogx.Shared.Hosting.csproj" />
+    </ItemGroup>
+</Project>
