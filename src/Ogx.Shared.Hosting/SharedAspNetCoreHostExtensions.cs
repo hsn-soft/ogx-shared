@@ -150,15 +150,6 @@ public static class SharedAspNetCoreHostExtensions
         return services;
     }
 
-    public static IServiceCollection AddMicroserviceUserTenantChecker(this IServiceCollection services)
-    {
-        services.AddBaseDataServiceCollection();
-        services.AddScoped<UserTenantCheckerMiddleware>();
-
-        return services;
-    }
-    public static void UseUserTenantChecker(this IApplicationBuilder app) => app.UseMiddleware<UserTenantCheckerMiddleware>();
-
     public static void UseLocalization(this IApplicationBuilder app, Type serviceResourceType)
     {
         EnumHelper.Configure(app.ApplicationServices.GetService<IStringLocalizerFactory>(), serviceResourceType);
