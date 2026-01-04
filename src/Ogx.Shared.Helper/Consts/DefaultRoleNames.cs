@@ -2,7 +2,7 @@ namespace Ogx.Shared.Helper.Consts;
 
 public static class DefaultRoleNames
 {
-    public const string SystemAdmin = $"{IdentityConsts.Admin}#{DefaultDomainNames.System}";
-    public const string SystemUser = $"{IdentityConsts.User}#{DefaultDomainNames.System}";
-    public const string AppUser = $"registered#{DefaultDomainNames.PublicApp}";
+    public const string SystemAdmin = "system-admin";
+    public const string SystemUser = "system-user";
+    public const string Registered = "registered";
 }
