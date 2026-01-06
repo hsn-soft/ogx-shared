@@ -182,6 +182,12 @@ public static class SharedAspNetCoreHostExtensions
 
     public static IServiceCollection AddHostingRedis(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddStackExchangeRedisCache(opt =>
+        {
+            opt.Configuration = configuration["Redis:Configuration"] ?? throw new InvalidOperationException();
+        });
+        services.AddSingleton<RedisLockService>();
+
         // services.Configure<BaseDistributedCacheOptions>(options =>
         // {
         //     options.KeyPrefix = "HsNsH:";
