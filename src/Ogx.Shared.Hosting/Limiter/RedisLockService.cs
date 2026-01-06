@@ -5,18 +5,18 @@ namespace Ogx.Shared.Hosting.Limiter;
 
 public sealed class RedisLockService(IDistributedCache cache)
 {
+    private const string LockKeyPrefix = $"lock:{IdentityConsts.SolutionName}";
+
     public async Task<bool> TryAcquireAsync(string key, TimeSpan ttl)
     {
-        string lockKey = $"lock:{IdentityConsts.SolutionName}:{key}";
-
-        string existing = await cache.GetStringAsync(lockKey);
+        string existing = await cache.GetStringAsync($"{LockKeyPrefix}:{key}");
         if (existing is not null) return false;
 
-        await cache.SetStringAsync(lockKey, "1",
+        await cache.SetStringAsync($"{LockKeyPrefix}:{key}", "1",
             new DistributedCacheEntryOptions { AbsoluteExpirationRelativeToNow = ttl });
 
         return true;
     }
 
-    public Task ReleaseAsync(string key) => cache.RemoveAsync(key);
+    public Task ReleaseAsync(string key) => cache.RemoveAsync($"{LockKeyPrefix}:{key}");
 }
