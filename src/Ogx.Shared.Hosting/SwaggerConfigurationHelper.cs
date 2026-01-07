@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 
 namespace Ogx.Shared.Hosting;
 

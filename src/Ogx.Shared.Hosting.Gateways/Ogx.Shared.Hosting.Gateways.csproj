@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Ocelot" Version="24.0.1"/>
+        <PackageReference Include="Ocelot" Version="24.1.0"/>
         <!--<PackageReference Include="Ocelot.Provider.Polly" Version="17.0.1" />-->
         <!--<PackageReference Include="Ocelot.Provider.Consul" Version="18.0.0" />-->
     </ItemGroup>

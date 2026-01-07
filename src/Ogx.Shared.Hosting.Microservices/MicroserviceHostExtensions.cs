@@ -11,8 +11,6 @@ using HsnSoft.Base.Application.Dtos;
 using HsnSoft.Base.AspNetCore;
 using HsnSoft.Base.AspNetCore.Hosting.Loader;
 using HsnSoft.Base.Data;
-using HsnSoft.Base.MultiTenancy;
-using HsnSoft.Base.Timing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
