@@ -15,7 +15,7 @@
 
     <ItemGroup>
         <PackageReference Include="MMLib.Ocelot.Provider.AppConfiguration" Version="4.0.0"/>
-        <PackageReference Include="MMLib.SwaggerForOcelot" Version="9.0.0"/>
+        <PackageReference Include="MMLib.SwaggerForOcelot" Version="10.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
